@@ -11,7 +11,7 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 
 setup(
     name='backports.socketpair',
-    version='3.5.0.2',
+    version='3.5.0.3',
     description='Python 2 support for socket.socketpair() on Windows',
     long_description=long_description,
     url='https://github.com/mhils/backports.socketpair',
@@ -23,7 +23,6 @@ setup(
         'Development Status :: 5 - Production/Stable',
         'License :: OSI Approved :: Python Software Foundation License',
         'Intended Audience :: Developers',
-        'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
