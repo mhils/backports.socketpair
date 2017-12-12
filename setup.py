@@ -9,9 +9,12 @@ here = path.abspath(path.dirname(__file__))
 with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
     long_description = f.read()
 
+with open(path.join(here, "backports", "socketpair", "__init__.py")) as fp:
+    __version__ = fp.read().split("__version__ = '", 1)[1].split("'", 1)[0]
+
 setup(
     name='backports.socketpair',
-    version='3.5.0.3',
+    version=__version__,
     description='Python 2 support for socket.socketpair() on Windows',
     long_description=long_description,
     url='https://github.com/mhils/backports.socketpair',
