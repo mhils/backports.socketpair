@@ -7,7 +7,7 @@ import errno
 _LOCALHOST    = '127.0.0.1'
 _LOCALHOST_V6 = '::1'
 
-if not hasattr(socket,"socketpair"):
+if not hasattr(socket, "socketpair"):
     # Origin: https://gist.github.com/4325783, by Geert Jansen.  Public domain.
     def socketpair(family=socket.AF_INET, type=socket.SOCK_STREAM, proto=0):
         if family == socket.AF_INET:
@@ -34,10 +34,10 @@ if not hasattr(socket,"socketpair"):
             try:
                 csock.setblocking(False)
                 if sys.version_info >= (3, 0):
-	                try:
-	                    csock.connect((addr, port))
-	                except (BlockingIOError, InterruptedError):
-	                    pass
+                    try:
+                        csock.connect((addr, port))
+                    except (BlockingIOError, InterruptedError):
+                        pass
                 else:
                     try:
                         csock.connect((addr, port))
